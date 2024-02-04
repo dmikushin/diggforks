@@ -7,6 +7,12 @@ Therefore, here is `diggforks`, a utility that finds all forks with GitHub API a
 
 ## Prerequsites
 
+* Install the latest version of `diggforks` using pip:
+
+    ```
+    pip install git+https://github.com/dmikushin/diggforks.git
+    ```
+
 * Create GitHub API token and store it in `~/.diggforks`
 * Use [tably](https://stackoverflow.com/a/61487052/4063520) git log formatting, by adding the `tably` command to `.gitconfig` (Note: this procedure is not going to break any existing `.gitconfig` tweaks):
 

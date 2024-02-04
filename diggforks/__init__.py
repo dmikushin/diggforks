@@ -18,7 +18,6 @@ def clone_forks(user, repo, token):
     }
     response = requests.get(url, headers=headers)
     forks = response.json()
-    print(forks)
     for fork in forks:
         os.system(f"git remote add {fork['owner']['login']}_fork {fork['clone_url']}")
         os.system(f"git fetch {fork['owner']['login']}_fork")
@@ -46,7 +45,7 @@ def get_git_remote_url():
             return line.split()[1]
     return None
 
-if __name__ == '__main__':
+def main():
     if not is_git_repo():
         print("Error: The current directory is not a Git repository.")
         sys.exit(1)
@@ -64,4 +63,7 @@ if __name__ == '__main__':
                 token = file.read().strip()
             print(f'Looking for forks of {repository} by {username}')
             clone_forks(username, repository, token)
+
+if __name__ == '__main__':
+    main()
 
