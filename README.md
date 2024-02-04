@@ -28,13 +28,12 @@ Therefore, here is `diggforks`, a utility that finds all forks with GitHub API a
 Change the current directory to the Git repository of interest and then run:
 
 ```
-python3 ../diggforks/diggforks.py
+diggforks
 git tably mylog3 | moar
 ```
 
 
 # TODO
 
-1. Add `setup.py`
-2. Add GIF
+1. Add GIF
 
